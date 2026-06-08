@@ -1,4 +1,9 @@
 <?php
+
+// ********
+// prueba para iniciar git
+// **********
+
 // Habilitar reporte de errores por si surge alguna anomalía en desarrollo
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
