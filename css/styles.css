@@ -1,0 +1,368 @@
+/* ==========================================
+   1. RESET Y CONFIGURACIÓN GENERAL 
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================
+   2. ESTILOS EXCLUSIVOS PARA EL LOGIN 
+   ========================================== */
+body.login-page {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+select, input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    font-size: 1rem;
+    color: #1f2937;
+    transition: border-color 0.2s;
+}
+
+select:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    background-color: #fff;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 1rem;              /* Incrementamos el relleno interno para que el botón sea más alto */
+    font-size: 1.3rem;          /* <--- Aumentado de 1rem a 1.3rem para que la fuente sea más grande */
+    font-weight: 700;           /* Cambiado a 700 para darle un tono más grueso y negrita (Bold) */
+    border-radius: 6px;
+    cursor: pointer;
+    /*text-transform: uppercase;  /* Opcional: Convierte el texto a mayúsculas para mayor impacto visual */
+    letter-spacing: 0.5px;      /* Separa ligeramente las letras para mejorar la legibilidad */
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efecto visual cuando el estudiante pasa el mouse por encima */
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+/* Efecto visual sutil cuando el estudiante hace clic */
+.btn-submit:active {
+    transform: scale(0.98);     /* Reduce el tamaño un 2% simulando un botón real hundido */
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #fca5a5;
+}
+
+/* ==========================================
+   3. ESTILOS EXCLUSIVOS PARA EL CUESTIONARIO (QUIZ)
+   ========================================== */
+body.quiz-page {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Permite que la página crezca hacia abajo si hay muchas preguntas */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.timer-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+}
+
+.timer-box {
+    background-color: #dc2626;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.quiz-container {
+    background: #ffffff; 
+    padding: 50px; /* Incrementamos el espacio interno para que respire mejor el contenido */
+    border-radius: 12px; 
+    max-width: 1100px; /* <--- Antes estaba en 800px. Ahora se expande hasta 1100px para verse más imponente */
+    width: 95%; /* Asegura que en pantallas medianas o laptops ocupe casi todo el ancho disponible */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 100px; 
+    margin-bottom: 40px;
+}
+
+/* Agranda el título principal dentro del examen */
+.quiz-container h2 {
+    color: #1f2937;
+    margin-bottom: 15px;
+    font-size: 2.2rem; /* Aumentado de 1.8rem */
+}
+
+/* Agranda el texto de las preguntas */
+.quiz-container p strong {
+    font-size: 1.2rem; /* Hace que "Pregunta 1:" resalte más */
+    color: #111827;
+}
+
+/* Agranda las opciones de respuesta (Radio buttons y etiquetas) */
+.quiz-container label {
+    font-size: 1.1rem; /* Textos de opciones más grandes y legibles */
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Agranda el tamaño físico del círculo del radio button */
+.quiz-container input[type="radio"] {
+    transform: scale(1.2); /* Agranda el círculo un 20% */
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.quiz-instruction {
+    color: #4b5563; 
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.btn-submit-quiz {
+    background: #1e3a8a; 
+    color: white; 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit-quiz:hover {
+    background: #1d4ed8;
+}
+
+/* ==========================================
+   MODAL DE CONFIRMACIÓN (EVITA CONGELAR RELOJ)
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Clase que activa visualmente el modal */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+
+.modal-box h3 {
+    color: #1f2937;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-modal-confirm {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-modal-confirm:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-modal-cancel {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-modal-cancel:hover {
+    background-color: #d1d5db;
+}
+
+/* ==========================================
+   4. ADAPTABILIDAD RECONOCIDA (MEDIA QUERIES)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* --- Ajustes para el Login en Celulares --- */
+    body.login-page {
+        padding: 10px; /* Menor margen exterior en móviles */
+    }
+
+    .login-container {
+        padding: 1.5rem; /* Reduce el espacio interno para dar más área a los campos */
+    }
+
+    .login-header h2 {
+        font-size: 1.5rem; /* Texto del título un poco más pequeño */
+    }
+
+    .btn-submit {
+        font-size: 1.1rem; /* Modera el tamaño del botón para que no sature la pantalla */
+        padding: 0.8rem;
+    }
+
+    /* --- Ajustes para el Quiz en Celulares --- */
+    .timer-banner {
+        flex-direction: column; /* Apila el nombre del estudiante arriba y el reloj abajo */
+        gap: 8px; /* Espacio vertical entre los dos elementos */
+        padding: 10px 15px; /* Reduce los márgenes laterales */
+        font-size: 1rem; /* Texto más compacto */
+    }
+
+    .timer-box {
+        font-size: 1.1rem; /* Reloj ligeramente más pequeño para que no se desborde */
+        padding: 4px 10px;
+    }
+
+    .quiz-container {
+        margin-top: 110px; /* Ajusta el espacio superior ya que el banner ahora es más alto */
+        padding: 20px; /* Reduce el espacio interno para aprovechar el ancho del celular */
+        width: 98%;
+    }
+
+    .quiz-container h2 {
+        font-size: 1.5rem; /* Título del examen adecuado a móviles */
+    }
+
+    /* --- Ajustes para el Modal en Celulares --- */
+    .modal-box {
+        padding: 20px;
+    }
+
+    .modal-buttons {
+        flex-direction: column; /* Apila los botones de SI y NO uno abajo del otro */
+        gap: 10px;
+    }
+
+    .btn-modal-confirm, .btn-modal-cancel {
+        width: 100%; /* Los botones ocupan todo el ancho disponible del modal */
+    }
+}

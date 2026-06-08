@@ -1,0 +1,17 @@
+# Activar el motor de redirección de Apache
+RewriteEngine On
+
+# Base sobre la que se aplican las reglas (tu carpeta del proyecto)
+RewriteBase /prueba/
+
+# Si el usuario escribe /reporte, transformarlo internamente
+RewriteRule ^reporte$ index.php?action=reporte [L,QSA]
+
+# Si el usuario escribe /quiz, transformarlo internamente
+RewriteRule ^quiz$ index.php?action=quiz [L,QSA]
+
+# Si el usuario escribe /logout, transformarlo internamente
+RewriteRule ^logout$ index.php?action=logout [L,QSA]
+
+# Si el usuario escribe /login, transformarlo internamente
+RewriteRule ^login$ index.php?action=login [L,QSA]
