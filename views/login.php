@@ -17,7 +17,7 @@
         .btn-submit { width: 100%; padding: 14px; background-color: #1a365d; color: #fff; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background-color 0.2s; }
         .btn-submit:hover { background-color: #2a4365; }
         .alert-error { background-color: #fff5f5; color: #c53030; border-left: 4px solid #f56565; padding: 12px; font-size: 14px; border-radius: 4px; text-align: left; margin-bottom: 20px; }
-        .footer { margin-top: 30px; color: #a0aec0; font-size: 12px; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+        .footer { margin-top: 30pcx; color: #a0aec0; font-size: 12px; border-top: 1px solid #e2e8f0; padding-top: 20px; }
     </style>
 </head>
 <body>
@@ -60,6 +60,8 @@
 
     <div class="footer">
         Ingeniero Luis Enrique Arias (C) 2026
+        wahsington nieto arce 2026
+        <p>Desarrollado por Washington Nieto Web &copy; <?=date('Y')?></p>
     </div>
 </div>
 
