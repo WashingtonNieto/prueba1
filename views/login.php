@@ -60,6 +60,7 @@
 
     <div class="footer">
         Ingeniero Luis Enrique Arias (C) 2026
+        wahsington nieto arce 2026
     </div>
 </div>
 
