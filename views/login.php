@@ -23,7 +23,7 @@
 <body>
 
 <div class="login-card">
-    <h1>Test de Conocimiento</h1>
+    <h1>EXAMEN</h1>
     <h2>(Codificación)</h2>
     <p class="subtitle">Seleccione su nombre y espere indicaciones para iniciar</p>
 
