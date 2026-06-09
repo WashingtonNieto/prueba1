@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test de Conocimiento</title>
+    <title>EXAMEN FINAL FINAL</title>
     <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
         .login-card { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); width: 100%; max-width: 420px; text-align: center; box-sizing: border-box; }
@@ -23,7 +23,7 @@
 <body>
 
 <div class="login-card">
-    <h1>Test de Conocimiento</h1>
+    <h1>EXAMEN</h1>
     <h2>(Codificación)</h2>
     <p class="subtitle">Seleccione su nombre y espere indicaciones para iniciar</p>
 
