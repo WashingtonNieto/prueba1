@@ -61,6 +61,7 @@
     <div class="footer">
         Ingeniero Luis Enrique Arias (C) 2026
         wahsington nieto arce 2026
+        <p>Desarrollado por Washington Nieto Web &copy; <?=date('Y')?></p>
     </div>
 </div>
 
